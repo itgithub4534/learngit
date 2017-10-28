@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax基础</title>
+	<script rel="stylesheet" src="ajax.js" charset="utf-8"></script>
+	<script>
+		window.onload = function(){
+			// var a = 12;
+			// 1.用没有定义的变量----报错
+			// 2.用没有定义的属性----undefined
+			// alert(window.a);
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+				ajax('aaa.txt?t='+ new Date().getTime() ,function(str){
+					alert(str);
+				})
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<button id="btn">点击</button>
+</body>
+</html>
